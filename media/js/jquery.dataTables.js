@@ -2713,6 +2713,8 @@
 	 */
 	function _fnFilterComplete ( oSettings, oInput, iForce )
 	{
+		_fnCallbackFire( oSettings, null, 'preSearch', [oSettings] );
+		
 		var oPrevSearch = oSettings.oPreviousSearch;
 		var aoPrevSearch = oSettings.aoPreSearchCols;
 		var fnSaveFilter = function ( oFilter ) {
